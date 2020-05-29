@@ -55,6 +55,7 @@ def loaddata():
             dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
             print("Date and Time:",dt_string,file=f)	
             print("Accuracy:",test_acc, file=f)
+            f.close()
         if test_acc < 0.95:
             continue
         else:
