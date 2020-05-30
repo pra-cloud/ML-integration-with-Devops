@@ -3,4 +3,6 @@
 ```
 vim Dockerfile
 ```
-![](SS/Dockerfile.png)
+
+
+![](SS/Job1a.PNG)
