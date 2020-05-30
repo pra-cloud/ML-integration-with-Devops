@@ -9,22 +9,64 @@ So for all this challenges we can take the help DevOps. When Machine Learning is
 
 In this practical you will come to know how we can integrate Machine Learning with Devops tools i.e. GitHub, Jenkins, Docker.For the practical I am using Base OS REHL – 8 on top of my windows using virtualization technology. Jenkins and Docker is installed in REHL – 8. There is a network connectivity between windows and RHEL – 8 so I am going to use Jenkins in windows chrome. I am using MNIST dataset for this practical.
 
+
+
+
 # Agenda : 
 -	Creating docker container using Dockerfile. 
--	When we launch this image, it should automatically starts train the model in the containe.
--	Tweak the machine learning model architecture if desired accuracy not got. 
--	Notify the developer when desired accuracy got
+-	When we launch this image, it should automatically starts train the model in the container.
+-	Tweak the machine learning model architecture if desired accuracy not got.
+-	Notify the developer when desired accuracy got.
 -	Keep monitoring if container fails due to any reason start/launch the container again where the last trained model left.
 
-## Step 1:
+
+# Step 1:
 - Python code is going to run in docker container in Centos. So saving all python script with .py extension and creating container image that has Python3, keras, numpy, tensorflow, etc. using Dockerfile. Finally uploaded/push on GitHub.
 
-
-
-
+- Dockerfile
 ```
-vim Dockerfile
+FROM centos
+
+RUN yum install python36 -y
+
+RUN yum install epel-release -y
+RUN yum update -y
+
+RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+RUN python3 get-pip.py
+
+RUN pip install setuptools
+RUN pip install keras
+RUN pip install pillow
+RUN pip install scikit-learn
+RUN pip install matplotlib
+RUN pip install seaborn
+RUN pip install pandas
+RUN pip install opencv-python
+RUN pip3 install tensorflow
+RUN pip install pyyaml
+
+COPY CNN_code.py .
+COPY Adding_layers.yaml .
+COPY Mail.py .
 ```
+
+
+
+![](SS/git.PNG)
+
+
+
+# Step 2:
+- Now Jenkins play's an important role to integrate docker, Machine Leaning and GitHub.
+
+## Job 1: 
+
+When developer push repository to Github. Jenkins Pull the Github repository automatically in Jenkins workspace and copy that in base OS system.
+
+
+
+
 
 
 
