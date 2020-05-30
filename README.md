@@ -59,14 +59,3 @@ COPY Mail.py .
 
 # Step 2:
 - Now Jenkins play's an important role to integrate docker, Machine Leaning and GitHub.
-
-When developer push repository to Github. Jenkins Pull the Github repository automatically in Jenkins workspace and copy that in base OS system.
-
-
-
-
-- hfg **roiugoiu** *gurgpounfnufc*
-
-
-
-
