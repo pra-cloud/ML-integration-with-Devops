@@ -11,8 +11,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 import os.path
 
-email = 'prakaash.2101@gmail.com'
-password = '9768629682A.'
+email = ''
+password = ''
 send_to_email = 'rajpurohitprakash04@gmail.com'
 subject = 'Model Accuracy'
 message = "Hey Developer!!! Check your final Model Accuracy after all tweaking. Now your model is giving desired accuracy."
