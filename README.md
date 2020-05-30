@@ -59,3 +59,7 @@ COPY Mail.py .
 
 # Step 2:
 - Now Jenkins play's an important role to integrate docker, Machine Leaning and GitHub.
+
+
+
+![](SS/Job1a.PNG)
