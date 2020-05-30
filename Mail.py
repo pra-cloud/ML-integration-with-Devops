@@ -13,10 +13,10 @@ import os.path
 
 email = 'Sender email'
 password = 'Sender email password'
-send_to_email = 'rajpurohitprakash04@gmail.com'
+send_to_email = 'pm68199@gmail.com'
 subject = 'Model Accuracy'
 message = "Hey Developer!!! Check your final Model Accuracy after all tweaking. Now your model is giving desired accuracy."
-file_location = 'Output.txt'
+file_location = 'root/mlpro/Output.txt'
 
 msg = MIMEMultipart()
 msg['From'] = email
